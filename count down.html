@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Count Down</title>
+</head>
+<body>
+
+<!-- 容器 -->
+<div id="timeWrap"></div>
+
+<!-- 计算倒计时 -->
+<script>
+    // 封装倒计时函数
+    function showCountDown(year,month,day,divname){
+    	// 将参数的日期转换为Date对象
+    	var endTime = new Date(year,month-1,day);
+    	// 获取当前时间
+    	var nowTime = new Date();
+    	// 计算两个日期的时间差
+    	var intervalTime = endTime.getTime() - nowTime.getTime();
+    	// 声明变量
+    	var d = 0, h = 0, m = 0, s = 0 ;
+    	// 计算天时分秒的值
+    	if(intervalTime>=0){
+    		d = Math.floor(intervalTime/1000/60/60/24);
+    		h = Math.floor(intervalTime/1000/60/60%24);
+    		m = Math.floor(intervalTime/1000/60%60);
+    		s = Math.floor(intervalTime/1000%60);
+    	}
+    	document.getElementById(divname).innerHTML= "距离"+year+"年"+month+"月"+day+"日，还有 "+d+"天-"+h+"时-"+m+"分-"+s+"秒." ;
+    };
+    // 定时调用倒计时函数
+    setInterval( function(){ showCountDown(2018,1,1,"timeWrap") } , 10 );
+</script>
+
+</body>
