@@ -1,3 +1,4 @@
 # 代码知识点笔记
 
-- #### [函数式编程](https://github.com/AKA-BEN/CodeNote/blob/master/function_formula.md)
+- ### [函数式编程](https://github.com/AKA-BEN/CodeNote/blob/master/programming-idea/function-formula.md)
+- ### [面向对象编程](https://github.com/AKA-BEN/CodeNote/blob/master/programming-idea/object-oriented.md)
